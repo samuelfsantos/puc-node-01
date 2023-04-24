@@ -4,15 +4,15 @@ module.exports = (app) => {
     // Recupera todos os Produtos
     app.get('/produtos', produtos.findAll);
 
+    // Recupera um Produto pelo Id
+    app.get('/produtos/:id', produtos.findOne);
+
     // Cria um novo Produto
     app.post('/produtos', produtos.create);
 
-    // Retrieve a single Note with noteId
-    //app.get('/notes/:noteId', notes.findOne);
+    // Atualiza um produto pelo Id
+    app.put('/produtos/:id', produtos.update);
 
-    // Update a Note with noteId
-    //app.put('/notes/:noteId', notes.update);
-
-    // Delete a Note with noteId
-    //app.delete('/notes/:noteId', notes.delete);
+    // Deleta um produto pelo Id
+    app.delete('/produtos/:id', produtos.delete);
 }
