@@ -7,8 +7,9 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content-type - application/json
 server.use(bodyParser.json());
-
-require('./src/routes/produto.route.js')(server);
+// versionamento
+const v1 = require('./src/routes/produto.route.js');
+server.use('/api/v1/', v1);
 
 server.listen(3000, () => {
     console.log('Servidor está funcionando..')

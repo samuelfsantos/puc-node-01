@@ -1,4 +1,7 @@
-module.exports = (app) => {
+
+    const express = require("express");
+    const app = express.Router();
+
     const produtos = require('../controllers/produto.controller.js');
 
     // Recupera todos os Produtos
@@ -15,4 +18,5 @@ module.exports = (app) => {
 
     // Deleta um produto pelo Id
     app.delete('/produtos/:id', produtos.delete);
-}
+
+    module.exports = app;
