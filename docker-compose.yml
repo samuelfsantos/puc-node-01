@@ -1,3 +1,4 @@
+# Compose para nuvem digital ocean
 version: "3"
 services:
   api-node-01:
@@ -8,22 +9,18 @@ services:
       dockerfile: ./Dockerfile
       args:
         - TAG=${TAG}
-    #working_dir: /home/node/app
-    #environment:
-    #  - NODE_ENV=production
-    #expose:
-    #  - "3000"
     ports:
       - "3000:3000"
 
 
-# O bloco abaixo para executar localhost
-# version: "3"
-# services:
-#   api:
-#     build: .
-#     working_dir: /home/node/app
-#     expose:
-#       - "3000"
-#     ports:
-#       - "3000:3000"
+# Compose para LOCALHOST
+#version: "3"
+#services:
+#  api-node-01:
+#    image: puc-node-api-1
+#    container_name: puc-node-api-1
+#    build: .
+#    expose:
+#      - "3000"
+#    ports:
+#      - "3000:3000"

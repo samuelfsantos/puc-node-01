@@ -11,5 +11,6 @@ COPY . .
 
 # Abre a porta 3000 e executa o comando para iniciar a aplicação
 EXPOSE 3000
-#CMD ["npm", "start"]
-CMD [ "node", "index.js" ]
+
+#CMD [ "node", "index.js" ]
+CMD ["npm", "start"]
