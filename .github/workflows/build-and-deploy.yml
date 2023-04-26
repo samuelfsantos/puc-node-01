@@ -77,7 +77,7 @@ jobs:
             --name $(echo $IMAGE_NAME_API) \
             $(echo $REGISTRY)/$(echo $IMAGE_NAME_API):$(echo $GITHUB_SHA | head -c7)        
             
-            
+          
             
             
            
