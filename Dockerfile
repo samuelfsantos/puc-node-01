@@ -7,8 +7,6 @@ COPY package*.json ./
 
 COPY --chown=node:node . .
 
-#EXPOSE 3000
-EXPOSE 80
-EXPOSE 443
+EXPOSE 3000
 
-CMD [ "node", "index.js" ]
+CMD ["npm", "start"]
