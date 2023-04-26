@@ -9,6 +9,10 @@ services:
       args:
         - TAG=${TAG}
     working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "3000"
     ports:
       - "3000:3000"
 
